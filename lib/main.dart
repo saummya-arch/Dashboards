@@ -1,7 +1,8 @@
 import 'package:dashboardapp/advancedtools.dart';
 import 'package:dashboardapp/corona.dart';
 import 'package:dashboardapp/recommended.dart';
-import 'package:dashboardapp/search.dart';
+//import 'package:dashboardapp/search.dart';
+import 'package:dashboardapp/second.dart';
 import 'package:dashboardapp/shortcut.dart';
 import 'package:dashboardapp/weather.dart';
 import 'package:flutter/material.dart';
@@ -41,19 +42,19 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     //Padding(padding: const EdgeInsets.only(top: 100),);
     return ListView(
-        padding: const EdgeInsets.only(top: 45),
+        padding: const EdgeInsets.only(top: 35),
       children: <Widget>[
         Weather(),
-      Padding(padding: const EdgeInsets.all(0.5)),
+      Padding(padding: const EdgeInsets.all(2.5)),
         Corona(),
-         Padding(padding: const EdgeInsets.all(0.5)) ,
+         Padding(padding: const EdgeInsets.all(2.5)) ,
         Shortcut(),
-    Padding(padding: const EdgeInsets.all(0.5)),
+    Padding(padding: const EdgeInsets.all(2.5)),
         Recommended(),
-         Padding(padding: const EdgeInsets.all(0.5)),
+         Padding(padding: const EdgeInsets.all(2.5)),
         AdvancedTools(),
-         Padding(padding: const EdgeInsets.all(0.5)),
-        Search(),
+         Padding(padding: const EdgeInsets.all(2.5)),
+         Second(),
       ],
      );
       

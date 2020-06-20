@@ -9,10 +9,10 @@ class _RecommendedState extends State<Recommended> {
   @override
   Widget build(BuildContext context) {
     return Container(
-    margin: const EdgeInsets.all(10.0),
+   // margin: const EdgeInsets.all(10.0),
    // color: Colors.greenAccent,
-    width: 360.0,
-    height: 120.0,
+    width: 430.0,
+    height: 220.0,
     decoration: BoxDecoration(
     borderRadius: BorderRadius.only(
     bottomLeft: Radius.circular(12.0),

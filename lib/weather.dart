@@ -47,48 +47,50 @@ class _WeatherState extends State<Weather> {
   Widget build(BuildContext context) {
     return  Container(
     margin: const EdgeInsets.only(top: 20),
-    width: 200,
-    height: 68.0,
+    width: 360,
+    height: 100.0,
     decoration: BoxDecoration(
       borderRadius: BorderRadius.circular(12),
-      color: Colors.black
+      color: Colors.grey[850],
       ),
     child: Row(
      // mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
         //1
-        Padding(padding: const EdgeInsets.only(right: 8),),
+        Padding(padding: const EdgeInsets.only(right: 10),),
         //2
-        Image.asset('assets/weather.png', width: 40,height: 40,),
+        Image.asset('assets/weather.png', width: 40,height: 65,),
         //3
-        Padding(padding: const EdgeInsets.only(right: 4),),
+        Padding(padding: const EdgeInsets.only(top: 15,right: 6),),
         //4
         Column(
           children: <Widget>[
+             Padding(padding: const EdgeInsets.only(top: 20),
+          ),
             Text(
               temp != null ? temp.toString() + "\u00B0" : "Loading", 
-              style: TextStyle(fontSize: 30,color: Colors.white,decoration: TextDecoration.none),),
-              Padding(padding: const EdgeInsets.only(top: 2.0),),
-            Text(now.toString().substring(0,10), style: TextStyle(fontSize: 10,color: Colors.white,decoration: TextDecoration.none),)
+              style: TextStyle(fontSize: 26,color: Colors.white,decoration: TextDecoration.none),),
+              Padding(padding: const EdgeInsets.only(top: 3.0),),
+            Text(now.toString().substring(0,10), style: TextStyle(fontSize: 12,color: Colors.white,decoration: TextDecoration.none),)
            ],
         ),
         //5
-       Padding(padding: const EdgeInsets.only(right: 210),),
+       Padding(padding: const EdgeInsets.only(right: 250),),
         //6
         Column(
-         //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         // crossAxisAlignment: CrossAxisAlignment.end,
           children: <Widget>[
             Icon(
               Icons.more_vert,
               color: Colors.white,
-                size: 15,
+                size: 27
             ),
-            Padding(padding: const EdgeInsets.only(bottom: 9) ,),
+            //Padding(padding: const EdgeInsets.only(bottom: 9) ,),
              Icon(
               Icons.settings,
               color: Colors.white,
-                size: 15,
+                size: 22,
             )
           ],
         )
