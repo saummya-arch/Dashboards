@@ -15,10 +15,10 @@ class _AdvancedToolsState extends State<AdvancedTools> {
   child: Container(
   //  margin: const EdgeInsets.all(15.0),
     width: 360.0,
-    height: 260.0,
+    height: 700.0,
     decoration: BoxDecoration(
       borderRadius: BorderRadius.circular(12),
-      color: Colors.white
+      color: Colors.grey[850]
     ),
     child: new GestureDetector(
           onPanUpdate: (DragUpdateDetails details) {
@@ -40,9 +40,9 @@ class _AdvancedToolsState extends State<AdvancedTools> {
             Image.asset('assets/draw1.png',
             width: 15,height: 15,),
             Padding(padding: const EdgeInsets.only(right: 5,top: 10),),
-            Text("Draw it",style: TextStyle(color: Colors.black, fontSize: 15,
+            Text("Draw It Notes",style: TextStyle(color: Colors.white, fontSize: 15,
             decoration: TextDecoration.none),),
-            Padding(padding: const EdgeInsets.only(right: 270),),
+            Padding(padding: const EdgeInsets.only(right: 240),),
             IconButton(icon: Icon(Icons.delete,color: Colors.grey, size: 20.0,),
             onPressed: () => _points.clear(),
          ),
@@ -50,7 +50,7 @@ class _AdvancedToolsState extends State<AdvancedTools> {
           ),
               CustomPaint(
                 painter: new Signature(points: _points),
-                size: Size.fromHeight(30),
+                size: Size.infinite,
               ),
             ],
           )
@@ -69,7 +69,7 @@ class Signature extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     Paint paint = new Paint()
-      ..color = Colors.green
+      ..color = Colors.white
       ..strokeCap = StrokeCap.round
       ..strokeWidth = 5.0;
 

@@ -75,7 +75,7 @@ class _WeatherState extends State<Weather> {
            ],
         ),
         //5
-       Padding(padding: const EdgeInsets.only(right: 250),),
+       Padding(padding: const EdgeInsets.only(right: 210),),
         //6
         Column(
          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
